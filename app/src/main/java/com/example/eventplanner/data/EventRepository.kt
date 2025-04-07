@@ -11,15 +11,12 @@ import kotlinx.coroutines.launch
 
 class EventRepository(private val eventDao: EventDao) {
 
-    // Use LiveData for getting events
     fun getEventsByDate(date: String): LiveData<List<Event>> = eventDao.getEventsByDate(date)
 
-    // Use LiveData for getting all events
     fun getAllEvents(): LiveData<List<Event>> = eventDao.getAllEvents()
 
-    // Insert event into database
+
     fun insertEvent(event: Event) {
-        // Perform the insertion operation on a background thread using a coroutine
         CoroutineScope(Dispatchers.IO).launch {
             eventDao.insertEvent(event)
         }
@@ -33,9 +30,6 @@ class EventRepository(private val eventDao: EventDao) {
          }
     }
 
-    // Delete event from database
-//    suspend fun deleteEvent(event: Event) {
-//        eventDao.deleteEvent(event)
-//    }
+
 }
 

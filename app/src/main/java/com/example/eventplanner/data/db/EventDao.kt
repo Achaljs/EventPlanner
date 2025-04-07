@@ -12,10 +12,10 @@ import kotlinx.coroutines.flow.Flow
 interface EventDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-      fun insertEvent(event: Event)  // Insert or replace event in the database
+      fun insertEvent(event: Event)
 
     @Query("SELECT * FROM events WHERE date = :date")
-    fun getEventsByDate(date: String): LiveData<List<Event>>  // Get events by date
+    fun getEventsByDate(date: String): LiveData<List<Event>>
 
     @Query("SELECT * FROM events")
      fun getAllEvents(): LiveData<List<Event>>
@@ -24,5 +24,5 @@ interface EventDao {
     fun getEventsForDate(date: String): Flow<List<Event>>
 
     @Delete
-     fun deleteEvent(event: Event)  // Delete an event
+     fun deleteEvent(event: Event)
 }

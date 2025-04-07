@@ -10,10 +10,8 @@ import kotlinx.coroutines.launch
 
 class EventViewModel(private val repository: EventRepository) : ViewModel() {
 
-    // LiveData to hold events filtered by date
     val events: LiveData<List<Event>> = repository.getAllEvents() // Directly assign LiveData from repository
 
-    // Function to load events by date
     fun loadEventsForDate(date: String): LiveData<List<Event>> {
         return repository.getEventsByDate(date)
     }
@@ -27,7 +25,6 @@ class EventViewModel(private val repository: EventRepository) : ViewModel() {
             repository.deleteEvent(event)
         }
     }
-    // Function to add event
      fun addEvent(event: Event) {
         viewModelScope.launch {
             repository.insertEvent(event)
