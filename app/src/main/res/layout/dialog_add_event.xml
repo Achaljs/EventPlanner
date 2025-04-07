@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Title"
+
+        android:textSize="16sp"
+        android:layout_marginTop="12dp"
+        />
+
+    <EditText
+        android:id="@+id/etTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Title"
+        android:inputType="text"
+        />
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Enter Date"
+
+    android:textSize="16sp"
+    android:layout_marginTop="12dp"
+    />
+    <TextView
+        android:id="@+id/etDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="YYYY-MM-DD"
+        android:inputType="text"
+        android:clickable="false"
+        android:padding="8dp"
+        />
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Time"
+
+        android:textSize="16sp"
+        android:layout_marginTop="12dp"
+        />
+    <TextView
+        android:id="@+id/etTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter time (e.g. 3:00 PM)"
+        android:inputType="text"
+        android:padding="8dp"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Message"
+
+        android:textSize="16sp"
+        android:layout_marginTop="12dp"
+        />
+    <EditText
+        android:id="@+id/etDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter event description"
+        android:inputType="textMultiLine"
+        android:minLines="2"
+
+         />
+
+</LinearLayout>

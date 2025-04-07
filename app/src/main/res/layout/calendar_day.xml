@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="48dp"
+    android:layout_height="48dp"
+    android:padding="4dp">
+
+    <TextView
+        android:id="@+id/textViewDay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <!-- Event Indicator -->
+    <View
+        android:id="@+id/eventDot"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="6dp"
+        android:background="@android:color/black"
+        android:visibility="gone"
+        android:scaleType="centerCrop"
+        android:backgroundTint="@android:color/black"
+        android:backgroundTintMode="src_in"
+        android:elevation="2dp"
+        android:clipToOutline="true"
+        android:outlineProvider="background" />
+
+</FrameLayout>
+
+
